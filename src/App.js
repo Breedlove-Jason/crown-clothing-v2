@@ -1,3 +1,6 @@
+import React from 'react';
+import './categories.styles.scss';
+
 function App() {
     const categories = [
         {
@@ -26,12 +29,12 @@ function App() {
 
     return (
         <div className={"categories-container"}>
-            {categories.map(({title}) => (
+            {categories.map(({title, id}) => (
                 <div className={"category-container"}>
                     {/*<img src="" alt=""/>*/}
 
                     <div className="category-body-container">
-                        <h2 key={title.id}>{title}</h2>
+                        <h2 key={id}>{title}</h2>
                         <p>Shop Now</p>
 
                     </div>
