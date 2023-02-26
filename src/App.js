@@ -1,44 +1,43 @@
 import React from 'react';
 import './categories.styles.scss';
+import './components/category-item/category-item.style.scss'
+import CategoryItem from './components/category-item/category-item.component';
 
 function App() {
     const categories = [
         {
-            id: 1,
-            title: 'Hats',
+            "id": 1,
+            "title": "Hats",
+            "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
         },
         {
-            id: 2,
-            title: 'Jackets',
+            "id": 2,
+            "title": "Jackets",
+            "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
         },
         {
-            id: 3,
-            title: 'Sneakers',
+            "id": 3,
+            "title": "Sneakers",
+            "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
         },
         {
-            id: 4,
-            title: "Women's",
+            "id": 4,
+            "title": "Women's",
+            "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
         },
         {
-            id: 5,
-            title: "Men's",
+            "id": 5,
+            "title": "Men's",
+            "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
         }
 
     ];
 
 
     return (
-        <div className={"categories-container"}>
-            {categories.map(({title, id}) => (
-                <div className={"category-container"}>
-                    {/*<img src="" alt=""/>*/}
-
-                    <div className="category-body-container">
-                        <h2 key={id}>{title}</h2>
-                        <p>Shop Now</p>
-
-                    </div>
-                </div>
+        <div className={"categories-container"} >
+            {categories.map((category) => (
+                <CategoryItem key={category.id} category={category} />
 
             ))}
 
